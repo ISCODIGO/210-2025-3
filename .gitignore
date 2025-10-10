@@ -1,0 +1,34 @@
+# Ignore Visual Studio temporary files, build results, and package caches
+[Oo]bj/
+[Bb]in/
+*.suo
+*.user
+*.userprefs
+_ReSharper*/
+[Pp]ackages/
+
+# Ignore tool-specific directories
+_Build/
+_TestResults/
+
+# Ignore miscellaneous files
+*.log
+*.bak
+*.tmp
+*.swp
+[Tt]humbs.db
+*.DS_Store
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+*.snupkg
+
+# Ignore test result files
+TestResults/
+
+# Other files
+*.db
+*.v2
+*.vsidx
+*.bin
