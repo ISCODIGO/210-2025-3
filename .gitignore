@@ -37,3 +37,4 @@ TestResults/
 *.db-wal
 *.db-shm
 .copilot/
+DocumentLayout*.json
