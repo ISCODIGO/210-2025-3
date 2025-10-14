@@ -32,3 +32,8 @@ TestResults/
 *.v2
 *.vsidx
 *.bin
+
+# Copilot metadata
+*.db-wal
+*.db-shm
+.copilot/
