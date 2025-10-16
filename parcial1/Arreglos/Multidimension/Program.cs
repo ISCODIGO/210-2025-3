@@ -24,8 +24,16 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 }
 
 Console.WriteLine("Arreglo de 3 dimensiones");
-int[,,] cubo = new int[3, 3, 3];
+int[,,] cubo = new int[3, 4, 5];
 cubo[1, 1, 1] = 5;
+
+/*
+   0               1               2               3 
+0: [0, 0, 0, 0, 0] [0, 0, 0, 0, 0] [0, 0, 0, 0, 0] [0, 0, 0, 0, 0]
+1: [0, 0, 0, 0, 0] [0, 5, 0, 0, 0] [0, 0, 0, 0, 0] [0, 0, 0, 0, 0]
+2: [0, 0, 0, 0, 0] [0, 0, 0, 0, 0] [0, 0, 0, 0, 0] [0, 0, 0, 0, 0]
+ 
+*/
 Console.WriteLine("Cantidad de elementos: " + cubo.Length);
 
 Console.WriteLine("Dim 0: " + cubo.GetLength(0));
@@ -35,23 +43,26 @@ for (int i = 0; i < cubo.GetLength(0); i++)
 {
     for (int j = 0; j < cubo.GetLength(1); j++)
     {
+        Console.Write("[");
         for (int k = 0; k < cubo.GetLength(2); k++)
         {
             Console.Write(cubo[i, j, k]);
             Console.Write(", ");
         }
-        Console.WriteLine();
+        Console.Write("] ");
     }
     Console.WriteLine();
 }
 
 Console.WriteLine("Arreglos irregulares");
 int[][] irregulares = new int[3][];
-irregulares[0] = new int[]{1, 2};
-irregulares[1] = new int[]{3, 4, 5};
-irregulares[2] = new int[]{6};
+irregulares[0] = new int[] { 1, 2 };
+irregulares[1] = new int[] { 3, 4, 5 };
+irregulares[2] = new int[] { 6 };
 
-for  (int i = 0; i < irregulares.Length; i++)
+int[][] irregulares2 = [new int[]{1, 2}, new int[]{3, 4, 5}, new int[]{6}];
+
+for (int i = 0; i < irregulares.Length; i++)
 {
     for (int j = 0; j < irregulares[i].Length; j++)
     {
