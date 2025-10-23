@@ -57,7 +57,7 @@ public class Cliente
 
     public override string ToString()
     {
-        return $"{nombre} - {this.tipo}";
+        return $"{codigo}: {nombre} - {this.tipo}";
     }
 
     public string GetTelefono()
