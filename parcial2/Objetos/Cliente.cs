@@ -10,9 +10,9 @@ public class Cliente
     private string codigo;
     public string identidad;
     private string telefono;
-    private string Email
+    public string Email
     {
-        get; set;
+        get; private set;
     }
 
     private TipoCliente tipo;
@@ -82,9 +82,11 @@ public class Cliente
         {
             this.telefono = string.Empty;
         }
-
-
     }
 
+    public string GetCodigo()
+    {
+        return this.codigo;
+    }
 
 }
