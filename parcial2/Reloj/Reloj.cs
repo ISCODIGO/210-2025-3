@@ -13,6 +13,7 @@ namespace Relojes
         private int _segundos;
 
         public const int MAX_HORA = 23;
+        public const int MAX_MINUTOS = 59;
 
         public int Hora {
             get
@@ -29,7 +30,21 @@ namespace Relojes
                 }
             }
         }
-        public int Minutos { get; set; }
+        public int Minutos
+        {
+            get
+            {
+                return _minutos;
+            }
+
+            set
+            {
+                if (value < 0 || value > MAX_MINUTOS)
+                {
+                    throw new MinutoException($"Los minutos no es valida [0-{MAX_MINUTOS}]");
+                }
+            }
+        }
         public int Segundos { get; set; }
 
         public Reloj() 

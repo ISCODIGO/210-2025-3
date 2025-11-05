@@ -4,6 +4,6 @@ public class Program
 {
     static void Main(string[] args)
     {
-        Reloj reloj = new Reloj(25, 45, 23);
+        Reloj reloj = new Reloj(23, 457, 23);
     }
 }

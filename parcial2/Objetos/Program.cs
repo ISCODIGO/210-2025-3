@@ -66,7 +66,6 @@ class Program
         // Realizar depósito válido
         Console.WriteLine("Realizando depósito de 500...");
         cuenta.Depositar(500);
-        
         Console.WriteLine("==========================================");
     }
 }
