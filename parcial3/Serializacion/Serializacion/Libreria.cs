@@ -19,6 +19,12 @@ namespace Serializacion
             Libros = new Libro[capacidad];
         }
 
+        public Libreria()
+        {
+            Nombre = string.Empty;
+            Libros = new Libro[] { };
+        }
+
         public void AgregarLibro(Libro libro)
         {
             if (PosicionActual >= Libros.Length)

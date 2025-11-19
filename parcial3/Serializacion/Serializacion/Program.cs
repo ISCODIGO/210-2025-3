@@ -9,6 +9,7 @@ libreria.AgregarLibro(new Libro("El Aleph", "Borges", "204656456", 2020));
 libreria.ImprimirLibros();
 
 // Serializar: convertir un objeto a un archivo JSON
+Console.WriteLine("Serializar datos...");
 string json = JsonSerializer.Serialize(libreria);
 
 using (StreamWriter writer = new StreamWriter("datos.json"))
@@ -17,7 +18,7 @@ using (StreamWriter writer = new StreamWriter("datos.json"))
 }
 
 // Deserializar: convertir el archivo json2 en un objeto
-
+Console.WriteLine("Deserializar datos...");
 string json2 = File.ReadAllText("datos.json");
 var lib = JsonSerializer.Deserialize<Libreria>(json2);
 
