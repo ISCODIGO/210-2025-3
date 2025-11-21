@@ -19,7 +19,10 @@ switch (opcion)
       libreria.AgregarLibro(new Libro("Cien Años de Soledad", "Gabriel Garcia Marquez", "203453453", 2019));
 
       Console.WriteLine("Serializando datos...");
-      string json = JsonSerializer.Serialize(libreria);
+      string json = JsonSerializer.Serialize(libreria, new JsonSerializerOptions
+      {
+          WriteIndented = true,
+      });
       using (StreamWriter writer = new StreamWriter("datos.json"))
       {
          writer.Write(json);
